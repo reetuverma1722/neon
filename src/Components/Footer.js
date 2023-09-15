@@ -6,7 +6,6 @@ const Footer = () => {
 
 <footer className="footer">
         <div className="container">
-            
             <div className="footer__copy">
                 <div className="footer__copyright">
                     

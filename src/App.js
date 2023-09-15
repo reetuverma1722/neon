@@ -9,14 +9,12 @@ import UpcomingEvents from './Pages/UpcomingEvents';
 import Events_details from './Pages/Events_details';
 import Notifications from './Pages/Notifications';
 import Index1 from './Pages/Index1';
-
 import LoginForm from './Pages/LoginForm';
+import Add_review from './modal/Add_review';
 
 function App() {
   return (
-    <div classNameNameName="App">
-     
-  
+    <div className="App">
   <Routes>
     <Route path="/" element={<Index1/>}/>
     <Route path="/loginForm" element={<LoginForm/>}/>
@@ -28,6 +26,8 @@ function App() {
     <Route path="/upcomingEvents" element={<UpcomingEvents/>}/>
     <Route path="/favourites/events_details" element={<Events_details/>}/>
     <Route path="/notifications" element={<Notifications/>}/>
+    <Route path="/review" element={<Add_review/>}/>
+    
   </Routes>
     </div>
   );

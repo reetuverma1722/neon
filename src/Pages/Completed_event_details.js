@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../Components/Header'
+import Add_review from '../modal/Add_review'
 
 const Completed_event_details = () => {
   return (
@@ -21,10 +22,10 @@ const Completed_event_details = () => {
                 It helps us to improve and serve you better.
               </p>
             </div>
-
+<Link to="/review">
             <button className="btn__black" id="modalBtn">Add a review</button>
-            
-            <div id="modal" className="modal">
+            </Link>
+            {/* <div id="modal" className="modal">
            
               <div className="modal-content">
                 <div className="modal-header">
@@ -150,7 +151,7 @@ const Completed_event_details = () => {
                   <button className="btn btn__black" id="submitBtn">Submit</button>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div id="meterModal" className="modal">
                 
@@ -168,7 +169,7 @@ const Completed_event_details = () => {
                         width="122.881px"
                         height="122.88px"
                         viewBox="0 0 122.881 122.88"
-                        enable-background="new 0 0 122.881 122.88"
+                       
                         
                       >
                         <g>

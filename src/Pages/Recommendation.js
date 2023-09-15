@@ -1,9 +1,12 @@
 import React from 'react'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 
 const Recommendation = () => {
   return (
     <>
 <div>
+<Header/>
 <main className="content home recommendation--page">
 
 <div className="recommendations">
@@ -277,6 +280,7 @@ const Recommendation = () => {
 </div>
 
 </main>
+<Footer/>
 </div>
 
 
