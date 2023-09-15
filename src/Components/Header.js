@@ -1,52 +1,58 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
+import "../assets/scss/_header.scss"
+import logo from "../assets/img/neonlogo.svg"
 const Header = () => {
+
+    const Logout=()=>{
+        
+        console.log("logout")
+    }
   return (
    <>
 
     <div>
-    <header class="header">
-        <div class="container">
-            <div class="header__branding">
-                <a href="dashboard.html" class="header__branding__logo">
-                    <img src="./assets/img/logo-black.svg" alt="Logo" />
+    <header className="header">
+        <div className="container">
+            <div className="header__branding">
+                <a href="dashboard.html" className="header__branding__logo">
+                    <img src={logo} alt="Logo" />
                 </a>
             </div>
-            <nav class="header__menu">
-                <ul class="header__nav">
-                    <li class="header__nav__item header__nav__item-active header__nav__item--mobile">
-                        <a href="dashboard.html" class="header__nav__link header__nav__link--underline">Dashboard</a>
+            <nav className="header__menu">
+                <ul className="header__nav">
+                    <li className="header__nav__item header__nav__item-active header__nav__item--mobile">
+                    <Link className="header__nav__link header__nav__link--underline"  to="/Dashboard">Dashboard</Link>
+                              </li>
+                    <li className="header__nav__item header__nav__item--mobile">
+                    <Link className="header__nav__link header__nav__link--underline"  to="/favourites">Favourites</Link>
                     </li>
-                    <li class="header__nav__item header__nav__item--mobile">
-                        <a href="myfavorites.html" class="header__nav__link header__nav__link--underline">My
-                            favorites</a>
+                    <li className="header__nav__item header__nav__item--mobile">
+                    <Link className="header__nav__link header__nav__link--underline"  to="/UpcomingEvents">UpcomingEvents</Link>
+                
                     </li>
-                    <li class="header__nav__item header__nav__item--mobile">
-                        <a href="upcoming-event.html" class="header__nav__link header__nav__link--underline">Upcoming
-                            events</a>
-                    </li>
-                    <li class="header__nav__item header__nav__item--notifications">
-                        <a href="#" class="header__nav__link">
-                            <span class="icon-bell"></span>
-                               <span class="circle"></span>
+                    <li className="header__nav__item header__nav__item--notifications">
+                        <a href="#" className="header__nav__link">
+                            <span className="icon-bell"></span>
+                               <span className="circle"></span>
                         </a>
-                        <div class="popup">
-                            <h4 class="popup__title">Hey Charlie
-                                <span class="popup__icon">
-                                    <img src="./assets/img/hand.svg" alt="" />
+                        <div className="popup">
+                            <h4 className="popup__title">Hey Charlie
+                                <span className="popup__icon">
+                                    <img src="../assets/img/hand.svg" alt="" />
                                 </span>
                             </h4>
-                            <p class="popup__content">We noticed that you have changed your preferences. We have added
+                            <p className="popup__content">We noticed that you have changed your preferences. We have added
                                 some new events keeping in mind your new settings.</p>
-                            <p class="popup__content">Please visit the home page to check the new events and activities!
+                            <p className="popup__content">Please visit the home page to check the new events and activities!
                             </p>
-                            <div class="popup__actions">
-                                <button class="popup__btn" onclick="location.href = 'notifications.html';">I want to
+                            <div className="popup__actions">
+                                <button className="popup__btn" onclick="location.href = 'notifications.html';">I want to
                                     see</button>
-                                <a class="popup__link">Remind me later</a>
+                                <a className="popup__link">Remind me later</a>
                             </div>
-                            <div class="popup__pointer"></div>
-                            <div class="popup__close">
+                            <div className="popup__pointer">S</div>
+                            <div className="popup__close">
                                <svg version="1.1" id="Layer_1"
                                     xmlns="http://www.w3.org/2000/svg" 
                                     x="0px" y="0px" width="122.881px" height="122.88px" viewBox="0 0 122.881 122.88"
@@ -59,41 +65,46 @@ const Header = () => {
                             </div>
                         </div>
                     </li>
-                    <li class="header__nav__item header__nav__item--menu">
-                        <a href="#" class="header__nav__link">
-                            <div class="header__nav__link__menu">
-                                <span class="icon-menu"></span>
-                                <div class="header__nav__link__user">
-                                    <div class="header__nav__link__user--init"></div>
-                                     <div class="nav__link__user--pic"></div> 
+                    <li className="header__nav__item header__nav__item--menu">
+                        <a href="#" className="header__nav__link">
+                            <div className="header__nav__link__menu">
+                                <span className="icon-menu"></span>
+                                <div className="header__nav__link__user">
+                                    <div className="header__nav__link__user--init"></div>
+                                     <div className="nav__link__user--pic"></div> 
                                 </div>
                             </div>
                         </a>
-                        <div class="dropdown-menu">
-                            <ul class="nav">
-                                <li class="nav__item nav__item--mobile"><a href="dashboard.html" class="nav__link">Dashboard</a></li>
-                                <li class="nav__item nav__item--mobile"><a href="myfavorites.html" class="nav__link">My favorites</a>
+                        <div className="dropdown-menu">
+                            <ul className="nav">
+                                <li className="nav__item nav__item--mobile"><a href="dashboard.html" className="nav__link">Dashboard</a></li>
+                                <li className="nav__item nav__item--mobile"><a href="myfavorites.html" className="nav__link">My favorites</a>
                                 </li>
-                                <li class="nav__item nav__item--mobile"><a href="upcoming-event.html" class="nav__link">Upcomingevents</a>
+                                <li className="nav__item nav__item--mobile"><a href="upcoming-event.html" className="nav__link">Upcomingevents</a>
                                 </li>
-                                <li class="nav__divider nav__item--mobile"></li>
-                                <li class="nav__item"><a href="edit-profile.html" class="nav__link">Edit profiles</a>
+                                <li className="nav__divider nav__item--mobile"></li>
+                                <li className="nav__item">
+                               
+                                <Link className="nav__link"  to="/profile">Edit Profile</Link>
+                
                                 </li>
-                                <li class="nav__item"><a href="feedback.html" class="nav__link">Feedback</a></li>
-                                <li class="nav__item"><a href="settings.html" class="nav__link">Settings</a></li>
+                                <Link className="nav__link"  to="/feedback">Feedback</Link>
+                                <Link className="nav__link"  to="/settings">Settings</Link>
+                                       </ul>
+                        </div>
+                    </li>
+                    <li className="header__nav__item header__nav__item--languages">
+                        <div role="button" className="header__nav__link"><span className="icon-globe"></span></div>
+                        <div className="dropdown-menu dropdown-menu--sm">
+                            <ul className="nav">
+                                <li className="nav__item"><a href="#english" className="nav__link nav__link--selected">English</a></li>
+                                <li className="nav__item"><a href="#french" className="nav__link">French</a></li>
+                                <li className="nav__item"><a href="#arabic" className="nav__link">Arabic</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="header__nav__item header__nav__item--languages">
-                        <div role="button" class="header__nav__link"><span class="icon-globe"></span></div>
-                        <div class="dropdown-menu dropdown-menu--sm">
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#english" class="nav__link nav__link--selected">English</a></li>
-                                <li class="nav__item"><a href="#french" class="nav__link">French</a></li>
-                                <li class="nav__item"><a href="#arabic" class="nav__link">Arabic</a></li>
-                            </ul>
-                        </div>
-                    </li>
+
+                    <div className='logout' onclick={Logout}> <button>Logout</button></div>
                 </ul>
             </nav>
         </div>

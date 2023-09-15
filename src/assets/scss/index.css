@@ -1759,6 +1759,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin: 0.4rem 0;
 }
 
+.logout {
+  color: #EEEEEE;
+  background-color: pink;
+}
+
 .home .banner {
   margin-top: 56px;
 }
